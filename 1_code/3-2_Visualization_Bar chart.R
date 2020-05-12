@@ -3,7 +3,7 @@
 # The simplest kind of visualization is a bar chart.
 # Use the dataset "diamonds" that goes with ggplot2 in tidyverse package to do this exercise.
 
-# LOAD DATA ####################################################
+# LOAD DATA ################################################
 
 # pacman must already be installed; then load contributed
 # packages (including pacman) with pacman
