@@ -25,7 +25,7 @@ hist(diamonds$price,
      sub    = "(Source: ggplot2::diamonds)",
      ylab   = "Frequency",
      xlab   = "Price of Diamonds"
-     )
+)
 # Change color and remove bars' border
 hist(diamonds$price,
      breaks = 7,  # Suggest number of breaks
@@ -56,5 +56,3 @@ ggplot(diamonds, aes(x = price)) +
                  col="red",     # border color
                  alpha=0.5) +   # transparency
   ggtitle("Price of diamonds") 
-
-        
