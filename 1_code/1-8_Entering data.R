@@ -13,7 +13,7 @@ hist(df$Sepal.Width,
      main = "Histogram of Sepal Width",
      xlab = "Sepal Width (in cm)")
 
-# COMMENT OUT LINES ####
+# COMMENT LINES ####
 
 # Use comments to disable commands (Ctrl+Shift+C to switch off comments)
 hist(df$Sepal.Width,
@@ -46,7 +46,7 @@ seq(30, 0, by = -3)  # Count down by 3
 # ASSIGNING VALUES ####
 
 # Individual values
-a <- 1            # use <- and not =
+a <- 1            # use <- and not = (confused with arguments)
 2 -> b            # can go other way, but silly
 c <- d <- e <- 3  # multiple assignments
 
@@ -55,7 +55,7 @@ x <- c(1, 2, 5, 9)  # c = Combine/concatenate
 x                   # print contents of x in Console
 
 # MATHS ####
-y <- c(5, 1, 0, 10)
+(y <- c(5, 1, 0, 10)) # surround command with () also print
 x + y       # Adds corresponding elements in x and y
 x * 2       # Multiplies each element in x by 2
 2^6         # Powers/exponents
@@ -69,7 +69,7 @@ log10(100)  # Base 10 log
 rm(list = ls()) 
 
 # Clear packages
-detach("package:datasets", unload = TRUE)  # For base
+detach("package:datasets", unload = TRUE)  # for base
 
 # Clear plots
 dev.off()  # but only if there IS a plot
