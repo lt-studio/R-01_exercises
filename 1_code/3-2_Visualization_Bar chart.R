@@ -3,7 +3,7 @@
 # The simplest kind of visualization is a bar chart.
 # Use the dataset "diamonds" that goes with ggplot2 in tidyverse package to do this exercise.
 
-# LOAD DATA ################################################
+# LOAD DATA ####
 
 # pacman must already be installed; then load contributed
 # packages (including pacman) with pacman
@@ -12,7 +12,7 @@ pacman::p_load(pacman, tidyverse)
 ?diamonds  # get information about the diamonds dataset
 diamonds   # display the beginning of the dataset
 
-# BARPLOT OF FREQUENCIES ###################################
+# BARPLOT OF FREQUENCIES ####
 
 # First option is to use the generic plot option in R, though it does have some limitations
 plot(diamonds$cut)
@@ -33,17 +33,17 @@ diamonds %>%
   table() %>%  # put data in appropriate format
   barplot()
 
-# SORTING BAR PLOTS #########################################
+# SORTING BAR PLOTS ####
 
 # If the variable is ordinal, it indicates lessor or greater amounts of clarity. But most of the time in bar plots you're dealing with nominal variable. It's useful to make the chart in an increasing or descreasing order. 
 # Sort bars by decreasing values (not for ordinal variable)
 diamonds %>%
   select(clarity) %>%
   table() %>%
-  sort(decreasing = TRUE) %>%  # Sort table
+  sort(decreasing = TRUE) %>%  # sort table
   barplot()
 
-# ADD OPTIONS TO PLOT #######################################
+# ADD OPTIONS TO PLOT ####
 
 # Add title
 diamonds %>%
@@ -82,7 +82,7 @@ diamonds %>%
     col    = "#CD0000"  # red3
   ) # prettier-looking chart.
 
-# SIDE-BY-SIDE BARPLOT OF FREQUENCIES ######################
+# SIDE-BY-SIDE BARPLOT OF FREQUENCIES ####
 
 # Side-by-side bar charts and frequenceies for more than one categorical value at a time.
 # The generic plot() prints it out but doesn't tell what different colors mean.

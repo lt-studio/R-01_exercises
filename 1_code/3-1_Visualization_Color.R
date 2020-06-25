@@ -1,11 +1,11 @@
 # USING COLOR IN DATA VISUALIZATION
 
-# Create a simple sample dat
+# Create a simple sample data
 x <- c(24, 13, 7, 5, 3, 2)  
 # Make a default barplot of those number
 barplot(x) # basic graph with gray bars and no labels.
 
-# COLORS IN R ##################################################
+# COLORS IN R ####
 
 # Color names R has 657 color names for 502 unique colors,
 # Get list of color names
@@ -19,7 +19,7 @@ colors() # arranged alphabetically except for white.
 # RGB (0.00-1.00): col = rgb(.80, .00, .00)
 # Index number: col = colors() [555]
 
-# USE COLORS ###############################################
+# USE COLORS ####
 
 # Check RColorCodes.pdf for a full color chart in 3_resources
 # Assign color by color names
@@ -38,13 +38,13 @@ barplot(x, col = "#9FB6CD")  # slategray3
 barplot(x, col = colors() [555])  # red3
 barplot(x, col = colors() [602])  # slategray3
 
-# MULTIPLE COLORS ##########################################
+# MULTIPLE COLORS ####
 
 # Use a vector to specify several colors, which will repeat
 barplot(x, col = c("red3", "slategray3"))
 barplot(x, col = c("#9FB6CD", "#CD0000"))
 
-# USING COLOR PALETTES #####################################
+# USING COLOR PALETTES ####
 
 # See current palette
 palette() # 

@@ -3,7 +3,7 @@
 # Quantitative variables are usually graphed with histograms to see the shape of the distribution or boxplots which are useful for showing outliers.
 # Use the dataset "diamonds" that goes with ggplot2 in tidyverse package to do this exercise.
 
-# LOAD DATA #################################################
+# LOAD DATA ####
 
 # pacman must already be installed; then load contributed
 # packages (including pacman) with pacman
@@ -12,7 +12,7 @@ pacman::p_load(pacman, tidyverse)
 ?diamonds  # get information about the diamonds dataset
 diamonds   # display the beginning of the dataset
 
-# BARPLOT OF FREQUENCIES ####################################
+# BARPLOT OF FREQUENCIES ####
 
 # Create a boxplot with default command in Base R
 boxplot(diamonds$price) #overlapping outliers in the dataset.
@@ -52,7 +52,7 @@ diamonds %>%
     col    = "#CD0000"  # red3
   )
 
-# BOXPLOTS BY GROUP ########################################
+# BOXPLOTS BY GROUP ####
 
 # Boxplots are also useful for comparing several different groups or possibly several different variables as long as they are on the same scale. 
 # For this, use the generic command plot()
@@ -69,8 +69,4 @@ boxplot(price ~ color, data = diamonds,
         boxwex=0.4 , ylab="Price of Diamonds",
         main = "Boxplot of price and color", 
         col = c("slateblue1" , "tomato", "aquamarine", "bisque", "cyan", "darkolivegreen", "darkorchid1"),  
-        xaxt="n") # suppress the default x-axis
-
-        
-
-        
+        xaxt="n") # suppress the default x-axis.
