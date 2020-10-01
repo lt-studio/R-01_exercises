@@ -1,24 +1,23 @@
 # INTRODUCTION TO R
 
 # Create a vector object named x with 5 random diviates from a standard normal distribution
-x <- rnorm(5) #use "<-" for assignment rather than "=" or "->" to avoid confusion
-#comments after "#" are ignored by R intepreter
+x <- rnorm(5) # use "<-" for assignment rather than "=" or "->" to avoid confusion.
+# Comments after "#" are ignored by R intepreter.
 
-## Example 1: The distribution of weights and their relationship to age ====
-# Enter age and weight data as vectors using combining function (Table 1.1)
+## The distribution of weights and their relationship to age ###
+# Enter age and weight data as vectors using combining function (Tab 1.1)
 age <- c(1,3,5,2,11,9,3,9,12,3)
 weight <- c(4.4,5.3,7.2,5.2,8.5,7.3,6.0,10.4,10.2,6.1)
-#find out the avarage weight
+# Find out the avarage weight
 mean(weight)
-#find out the standart deviation
+# Find out the standart deviation
 sd(weight)
-#find out the correlation between age and weight
-cor(age, weight) #corellation = 0.91: there is strong linear relationship between age in months and weight in kilograms
-#plot to visually inspect the trend
-plot(age, weight) 
-#Not surprisingly, as infants get older, they tend to weigh more.
+# Find out the correlation between age and weight
+cor(age, weight) # corellation = 0.91: there is strong linear relationship between age in months and weight in kilograms.
+# Plot to visually inspect the trend
+plot(age, weight) # not surprisingly, as infants get older, they tend to weigh more.
 
-## See what R can do graphically ====
+## See what R can do graphically ####
 demo() #a complete list of demonstrations
 #try out different types of demonstrations from the package "graphics"
 demo(Hershey) 
@@ -26,16 +25,16 @@ demo(persp)
 demo(graphics)
 demo(image) 
 
-## Getting help (Table 1.2) ====
+## Getting help (Tab 1.2) ####
 
 help.start() #general help
 help() #or ?"function" for specific function
 help.search() #search the help system for instances of the function
 example() #example of the function
 RSiteSearch() #search online help manual
-data() #list all available example datasets for currently installed packages
+data() #list all available example datasets for currently installed packages.
 
-## Set current options ====
+## Set current options ####
 #history(#) #disfunctions for managing working space
 getwd() #shows the current working directory
 setwd("C:/Documents/R") #changes the current working directory to C:/Documents/R
