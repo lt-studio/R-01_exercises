@@ -2,26 +2,31 @@
 
 # A good way to get a good feel for what it's like to work in R is to use them with the built-in sample datasets in R.
 
-# INSTALL AND LOAD PACKAGES ################################
+# Install and load packages ####
 
 # Load base packages manually
 library(datasets) 
 # Inquire more information about the dataset
 ?datasets # extra infos are shown in Help window
-# For a complete list of datasets
+# For a complete list of data sets
 library(help = "datasets")
 
-# COMMON SAMPLE DATASETS ####################################
+# Common Data sets ####
 
-# iris data: a great dataset for learning about classification and clustering techniques.
+# iris data: a great data set for learning about classification and clustering techniques.
 ?iris # description of iris flowers
-iris  # see the entire dataset
+iris  # see the entire data set.
+# Load and view the data set in table
+data(iris)
+View(iris)
+# Find out how many species are there in the data set
+unique(iris$Species)
 
-# UCBAdmissions: a dataset to learn how to work with tablular data.
+# UCBAdmissions: a data set to learn how to work with tablular data.
 ?UCBAdmissions # refers to student admission at UC Berkeley
-UCBAdmissions # this is a wellknown dataset because it helps illustrate a statistical conundrum about what happens when you aggregate different levels of data.
+UCBAdmissions # this is a well-known data set because it helps illustrate a statistical conundrum about what happens when you aggregate different levels of data.
 
-# Titanic: common dataset used for machine learning
+# Titanic: common data set used for machine learning
 ?Titanic  # who survived the sinking of the Titanic
 Titanic   
 # from that you can start modeling some of the elements that tried to predict what the outcomes were in that particular situation.
