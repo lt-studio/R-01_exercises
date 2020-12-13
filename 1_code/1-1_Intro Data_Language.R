@@ -1,9 +1,8 @@
-
 # 1. THE LANGUAGE OF DATA
 
 # 1.1 Datasets and data frames ####
 
-# The dataset "High School and Beyond" comes from a survey which was condcuted on high school seniors by the National Center of Education Statistics. 
+# The dataset "High School and Beyond" comes from a survey which was conducted on high school seniors by the National Center of Education Statistics. 
 # The data is organized in a data frame, where each row represents an observation or a case, and each column represents a variable. This data is stored in the openintro package.
 
 # Install, load the package and the data:
@@ -15,7 +14,7 @@ str(hsb2)
 # Another option for taking a quick look at your data is using glimpse() from the dplyr package.
 library(dplyr)
 glimpse(hsb2)
-# The output of glimpse() is similar to str(), except that glimpse() always try to show as much of the data as it fits to the screen. 
+# The output of glimpse() is similar to str(), except that glimpse() always tries to show as much of the data as it fits to the screen. 
 
 # 1.2 Types of variables ####
 
@@ -64,7 +63,7 @@ hsb2_public <- hsb2 %>%
   filter(schtyp == "public")
 # Now if we make another frequency table of school type in the subsetted dataset, we should only see public school.
 table(hsb2_public$schtyp)
-# But since we already filtered out the students from private schools, it is unepected that the level is still there as an empty placeholder, without observations in it. This is not necessary a problem, but it can result in unexpected behavior and complicate the visualizations. In order to get rid of the unused levels showing up in summaries and graphs, we can explicitly drop them with droplevels function:
+# But since we already filtered out the students from private schools, it is unexpected that the level is still there as an empty placeholder, without observations in it. This is not necessary a problem, but it can result in unexpected behavior and complicate the visualizations. In order to get rid of the unused levels showing up in summaries and graphs, we can explicitly drop them with droplevels function:
 hsb2_public$schtyp <- droplevels(hsb2_public$schtyp)
 # Run again the frequency table:
 table(hsb2_public$schtyp)
@@ -84,7 +83,7 @@ table(email50_big$number_dropped)
 # 1.4 Discretize a variable ####
 
 # A common way of creating a new variable from an existing variable is discretizing that is a numerical variable to a categorical variable based on certain criteria.
-# E.g, suppose we are nor interested in the actual reading score of students, but instead whether their reading score is below average or at or above average. 
+# E.g, suppose we are not interested in the actual reading score of students, but instead whether their reading score is below average or at or above average. 
 # First we need to calculate the average reading score:
 (avg_read <- mean(hsb2$read))
 # Next, determine whether each student is below or at or above average:
@@ -105,7 +104,7 @@ email50_fortitied <- email50 %>%
 email50_fortitied %>%
   count(num_char_cat)
 
-# Another common way of creating a new variable based on an existing one is by combing levels of a categorical variable. E.g, the email50 dataset has a categorical varaible called "number" with levels "none", "small", and "big", but suppose we're only interested in whether an email contains a number. 
+# Another common way of creating a new variable based on an existing one is by combing levels of a categorical variable. E.g, the email50 dataset has a categorical variable called "number" with levels "none", "small", and "big", but suppose we're only interested in whether an email contains a number. 
 email50_fortitied <- email50 %>%
   mutate(number_yn = case_when(number == "none" ~ "no",
                                number != "none" ~ "yes"))
